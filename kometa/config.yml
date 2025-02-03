@@ -141,7 +141,7 @@ plex:                                # Can be individually specified per library
   optimize: false
   verify_ssl:
 tmdb:                                # REQUIRED for the script to run
-  apikey: ############ API KEY #################
+  apikey: ############ API KEY ##################
   language: en
   cache_expiration: 60
   region:
