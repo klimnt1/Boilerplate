@@ -17,7 +17,7 @@
 # Put the .py file in it
 # Use the User Scripts plugin in Unraid
 ## Copy this code ##
-# --- python3 /mnt/user/appdata/python_scripts/file.py ---
+# --- python3 /mnt/user/appdata/python_scripts/file.py ----
 
 import os
 import xlsxwriter
