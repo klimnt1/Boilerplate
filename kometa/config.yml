@@ -1,0 +1,178 @@
+libraries:                              # This is called out once within the config.yml file
+  # test-library:                       # These are names of libraries in your Plex
+  #   collection_files:
+  #   - default: franchise
+  #   - file: config/collections_movies.yml 
+  #   remove_overlays: false
+  #   reapply_overlays: false
+  #   overlay_files:
+  #   - default: resolution
+  #     template_variables:
+  #       horizontal_align: right
+  #   - file: config/ratings_movies.yml  
+  #   operations:
+  #     mass_content_rating_update: mdb_commonsense
+  #     split_duplicates: false         # Splits all duplicate movies/shows found in this library
+  #     delete_collections:
+  #       configured: false             # False - Collection must be an Unconfigured Collection to be deleted (collection is not in the config file of the specific Kometa run).
+  #       managed: false                # False - Collection must be an Unmanaged Collection to be deleted (the collection does not have the Kometa label)
+  #       less: 99999     
+  Movies 4K:                            # These are names of libraries in your Plex
+    collection_files:
+    - default: franchise
+      template_variables:
+        exclude:
+          - 1415503                     # <-- Add the invalid/unknown Collection ID here
+    - file: config/collections_movies.yml
+    remove_overlays: false
+    reapply_overlays: false
+    overlay_files:
+    - default: resolution
+      template_variables:
+        horizontal_align: right
+        use_1080p: false
+        use_720p: false
+        use_576p: false
+        use_480p: false
+        use_1080p_hdr: false
+        use_1080p_dv: false
+    - file: config/ratings_movies.yml
+    operations:
+      mass_content_rating_update: mdb_commonsense
+      split_duplicates: false         # Splits all duplicate movies/shows found in this library
+      delete_collections:
+        configured: false             # False - Collection must be an Unconfigured Collection to be deleted (collection is not in the config file of the specific Kometa run).
+        managed: false                # False - Collection must be an Unmanaged Collection to be deleted (the collection does not have the Kometa label)
+        less: 99999                   # Effectively all collections regardless of the number of items in the collection
+  Movies:
+    collection_files:
+    - default: franchise
+      template_variables:
+        exclude:
+          - 1415503                   # <-- Add the invalid/unknown Collection ID here
+    - file: config/collections_movies.yml
+    overlay_files:
+    - file: config/ratings_movies.yml
+    remove_overlays: false
+    reapply_overlays: false
+    operations:
+      mass_content_rating_update: mdb_commonsense
+      split_duplicates: false       # Splits all duplicate movies/shows found in this library
+      delete_collections:
+        configured: false           # False - Collection must be an Unconfigured Collection to be deleted (collection is not in the config file of the specific Kometa run).
+        managed: false              # False - Collection must be an Unmanaged Collection to be deleted (the collection does not have the Kometa label)
+        less: 99999                 # Effectively all collections regardless of the number of items in the collection
+  TV Shows:
+    overlay_files:
+    - file: config/gradient_overlay.yml
+    - pmm: status
+      template_variables:
+        text_airing: A I R I N G
+        text_returning: R E T U R N I N G
+        text_canceled: C A N C E L E D
+        text_ended: E N D E D
+        horizontal_align: center
+        vertical_offset: 55
+        vertical_align: bottom
+        font_color_airing: '#27C24C'
+        font_color_returning: '#FFA500'
+        font_color_canceled: '#ED1F1F'
+        font_color_ended: '#FF0000'
+        back_color: '#000000'
+        back_width_airing: 2000
+        back_width_returning: 2000
+        back_width_canceled: 2000
+        back_width_ended: 2000
+        back_height: 100
+        font_size: 80
+    - file: config/ratings_tv.yml
+    assets_for_all: true                 # Search in assets for images for every item in your library
+settings:
+  run_order:
+  - overlays
+  - operations
+  - metadata
+  - collections
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order: alpha
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: false   
+  show_unconfigured: false   
+  show_filtered: false
+  show_options: true
+  show_missing: false   
+  show_missing_assets: false   
+  save_report: false
+  tvdb_language: eng
+  ignore_ids: 
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_users: all
+  playlist_exclude_users:
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality: 75
+plex:                                # Can be individually specified per library as well; REQUIRED for the script to run
+  url: http://###.###.##.##:32400/
+  token: ########## Your Plex Token #############
+  timeout: 60
+  db_cache:
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  verify_ssl:
+tmdb:                                # REQUIRED for the script to run
+  apikey: ############ API KEY #################
+  language: en
+  cache_expiration: 60
+  region:
+radarr:                              # Can be individually specified per library as well
+  url: http://###.###.##.##:7878
+  token: ##########Your RADARR TOKEN #############
+  add_missing: false
+  add_existing: false
+  upgrade_existing: false
+  monitor_existing: false
+  root_folder_path: ############### YOUR MEDIA PATH ############# EXAMPLE: /media
+  monitor: true
+  availability: announced
+  quality_profile: ######## YOUR QUALITY PROFILE IN RADARR ######
+  tag:
+  search: false
+  radarr_path:
+  plex_path:
+  ignore_cache: false
+mdblist:
+  apikey: ####### YOUR API ###########################
+  cache_expiration: 60
+trakt:
+  client_id: ######### YOUR CLIENT ID ###################
+  client_secret: ###### YOUR CLIENT SECRET ############################
+  pin:
+  authorization:
+    # everything below is autofilled by the script
+    access_token: 
+    token_type: 
+    expires_in: 
+    refresh_token: 
+    scope: 
+    created_at: 
