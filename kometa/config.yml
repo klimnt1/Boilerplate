@@ -1,22 +1,4 @@
 libraries:                              # This is called out once within the config.yml file
-  # test-library:                       # These are names of libraries in your Plex
-  #   collection_files:
-  #   - default: franchise
-  #   - file: config/collections_movies.yml 
-  #   remove_overlays: false
-  #   reapply_overlays: false
-  #   overlay_files:
-  #   - default: resolution
-  #     template_variables:
-  #       horizontal_align: right
-  #   - file: config/ratings_movies.yml  
-  #   operations:
-  #     mass_content_rating_update: mdb_commonsense
-  #     split_duplicates: false         # Splits all duplicate movies/shows found in this library
-  #     delete_collections:
-  #       configured: false             # False - Collection must be an Unconfigured Collection to be deleted (collection is not in the config file of the specific Kometa run).
-  #       managed: false                # False - Collection must be an Unmanaged Collection to be deleted (the collection does not have the Kometa label)
-  #       less: 99999     
   Movies 4K:                            # These are names of libraries in your Plex
     collection_files:
     - default: franchise
