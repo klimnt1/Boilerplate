@@ -10,14 +10,8 @@
 # Install Python 3 via the NerdTools/NerdPack plugin
 # Install xlsxwriter 
 ## Copy this code into Unraid Terminal. You need to create a new script and paste this code. Schedule it to run at first Array startup only ##
-# --- pip install xlsxwriter ---
+# pip install xlsxwriter
 
-### Automating the Script ###
-# Create a folder in /mnt/user/appdata/python_scripts
-# Put the .py file in it
-# Use the User Scripts plugin in Unraid
-## Copy this code ##
-# --- python3 /mnt/user/appdata/python_scripts/file.py ----
 
 import os
 import xlsxwriter
@@ -80,3 +74,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+### Automating the Script ###
+# Create a folder in /mnt/user/appdata/python_scripts
+# Put the .py file in it
+# Use the User Scripts plugin in Unraid
+## Copy this code ##
+
+#!/bin/bash
+
+# python3 /mnt/user/appdata/python_scripts/plex_library_export.py
+# if [ $? -ne 0 ]; then
+#   send_discord_message "Python script (plex_library_export.py) **failed**!"
+# fi
