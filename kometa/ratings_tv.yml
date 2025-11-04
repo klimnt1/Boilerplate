@@ -6,7 +6,7 @@ overlays:
       horizontal_align: left
       vertical_offset: 0
       vertical_align: top
-      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_High.png
+      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_High.png  # HIGH RATING OVERLAY IMAGE URL
     plex_search:
       all:
         audience_rating.gte: 6.5
@@ -18,7 +18,7 @@ overlays:
       horizontal_align: left
       vertical_offset: 0
       vertical_align: top
-      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_Mid.png
+      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_Mid.png  # MID RATING OVERLAY IMAGE URL
     plex_search:
       all:
         audience_rating.gte: 4.5
@@ -31,7 +31,7 @@ overlays:
       horizontal_align: left
       vertical_offset: 0
       vertical_align: top
-      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_Low.png
+      url: https://raw.githubusercontent.com/fscorrupt/Kometa-Overlays/main/ratings/Rating_Low.png  # LOW RATING OVERLAY IMAGE URL
     plex_search:
       all:
         audience_rating.gte: 0.1

@@ -3,8 +3,8 @@ collections:
     tmdb_popular: 5                #### 5 MOST POPULAR SHOWS. NEED TO ENABLE SONARR TO BE ABLE TO DOWNLOAD SHOWS IN THE CONFIG.YML ####
     collection_order: custom
     sync_mode: sync
-    url_background: https://i.imgur.com/SOVfrIq.png      
-    url_poster: https://i.imgur.com/1qbVXLi.png
+    url_background: https://i.imgur.com/SOVfrIq.png   # BACKGROUND IMAGE FOR THE COLLECTION 
+    url_poster: https://i.imgur.com/1qbVXLi.png     # POSTER IMAGE FOR THE COLLECTION
     sonarr_add: true
     sonarr_search: true
     sonarr_monitor: all

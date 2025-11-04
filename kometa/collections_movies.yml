@@ -1,11 +1,11 @@
 collections:
   Top Ten Weekly Movies:
-      trakt_list: https://trakt.tv/users/hdlists/lists/top-ten-pirated-movies-of-the-week-torrent-freak-com
+      trakt_list: https://trakt.tv/users/hdlists/lists/top-ten-pirated-movies-of-the-week-torrent-freak-com # Add your own Trakt list URL here
       smart_label: year.desc
       sync_mode: sync
       sort_title: +++++++++++++++++++++_1APirated Weekly
-      url_background: https://i.imgur.com/SOVfrIq.png      
-      url_poster: https://i.imgur.com/1qbVXLi.png
+      url_background: https://i.imgur.com/SOVfrIq.png     # Background image URL 
+      url_poster: https://i.imgur.com/1qbVXLi.png        # Poster image URL
       collection_mode: default
       collection_filtering: user
       visible_library: true
@@ -17,11 +17,11 @@ collections:
   Trending Now (Unplayed):
       trakt_chart:
         chart: trending
-        limit: 5
+        limit: 10
         countries: us
       sort_title: "!B Trending Now"
-      url_poster: https://i.imgur.com/tnuP538.png
-      url_background: https://i.imgur.com/juAQnOG.jpg
+      url_poster: https://i.imgur.com/tnuP538.png     # Poster image URL
+      url_background: https://i.imgur.com/juAQnOG.jpg  # Background image URL
       sync_mode: sync
       collection_mode: default
       collection_filtering: user
@@ -50,43 +50,43 @@ collections:
     summary: A collection of the most popular Animated Kids movies from TMDb
     sort_title: "*150"
     schedule: daily
-    url_poster: https://i.imgur.com/WDRj8a9.png
-    url_background: https://i.imgur.com/juAQnOG.jpg    
+    url_poster: https://i.imgur.com/WDRj8a9.png   # Poster image URL
+    url_background: https://i.imgur.com/juAQnOG.jpg     # Background image URL
   Christmas Collection:
-      trakt_list: https://trakt.tv/users/klimnt/lists/christmas-movies?sort=rank,asc
+      trakt_list: https://trakt.tv/users/klimnt/lists/christmas-movies?sort=rank,asc # Add your own Trakt list URL here
       smart_label: year.desc
       sync_mode: append
       sort_title: '!060_Christmas Movies' 
-      url_poster: https://i.postimg.cc/wvd4HnWp/Christmas-Collection.jpg
-      url_background: https://i.imgur.com/juAQnOG.jpg
+      url_poster: https://i.postimg.cc/wvd4HnWp/Christmas-Collection.jpg  # Poster image URL
+      url_background: https://i.imgur.com/juAQnOG.jpg    # Background image URL
       collection_mode: default
       visible_library: true
-      visible_home: false
-      visible_shared: true
+      visible_home: range(12/01-12/31)         # Visible during season
+      visible_shared: range(12/01-12/31)       # Visible during season
       radarr_add: true
       radarr_search: true
       radarr_monitor: true 
   Halloween Collection:
-      trakt_list: https://trakt.tv/users/klimnt/lists/halloween-movies?sort=rank,asc
+      trakt_list: https://trakt.tv/users/klimnt/lists/halloween-movies?sort=rank,asc  # Add your own Trakt list URL here
       smart_label: year.desc
       sync_mode: append
       sort_title: '!060_Halloween Movies' 
-      url_poster: https://i.postimg.cc/1RHcjNLM/Halloween.webp
-      url_background: https://i.imgur.com/juAQnOG.jpg
+      url_poster: https://i.postimg.cc/1RHcjNLM/Halloween.webp   # Poster image URL
+      url_background: https://i.imgur.com/juAQnOG.jpg    # Background image URL
       collection_mode: default
       visible_library: true
-      visible_home: false
-      visible_shared: true
+      visible_home: range(10/01-10/31)         # Visible during season
+      visible_shared: range(10/01-10/31)       # Visible during season
       radarr_add: true
       radarr_search: true
       radarr_monitor: true   
   Lifetime Collection:
-      trakt_list: https://trakt.tv/lists/30502802
+      trakt_list: https://trakt.tv/lists/30502802   # Add your own Trakt list URL here
       smart_label: year.desc
       sync_mode: append
       sort_title: '!060_Lifetime Movies' 
-      url_poster: https://i.postimg.cc/Ghp9Ht1w/lifetime.jpg
-      url_background: https://i.imgur.com/juAQnOG.jpg
+      url_poster: https://i.postimg.cc/Ghp9Ht1w/lifetime.jpg   # Poster image URL
+      url_background: https://i.imgur.com/juAQnOG.jpg     # Background image URL
       collection_mode: default
       visible_library: true
       visible_home: false
